@@ -18,7 +18,7 @@ class ActionInvalid(Exception):
         super().__init__(self.message)
 
 
-class StockTradingEnvV1(gym.Env):
+class OptionTradingEnvV1(gym.Env):
     """
     Stock trading environment for Reinforcement learning.
     **STATE:**
