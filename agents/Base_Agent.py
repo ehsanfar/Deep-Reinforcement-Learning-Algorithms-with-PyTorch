@@ -11,6 +11,8 @@ from nn_builder.pytorch.NN import NN
 # from tensorboardX import SummaryWriter
 from torch.optim import optimizer
 
+# os.environ['CUDA_VISIBLE_DEVICES'] ='0'
+
 class Base_Agent(object):
 
     def __init__(self, config):
@@ -38,7 +40,7 @@ class Base_Agent(object):
         self.max_rolling_score_seen = float("-inf")
         self.max_episode_score_seen = float("-inf")
         self.episode_number = 0
-        self.device = "cuda:0" if config.use_GPU else "cpu"
+        self.device = "cpu" #"cuda:0" if config.use_GPU else "cpu"
         self.visualise_results_boolean = config.visualise_individual_results
         self.global_step_number = 0
         self.turn_off_exploration = False

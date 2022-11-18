@@ -1,5 +1,8 @@
 from agents.DQN_agents.DQN import DQN
 from agents.HER_Base import HER_Base
+import os 
+
+# os.environ['CUDA_VISIBLE_DEVICES'] ='0'
 
 class DQN_HER(HER_Base, DQN):
     """DQN algorithm with hindsight experience replay"""

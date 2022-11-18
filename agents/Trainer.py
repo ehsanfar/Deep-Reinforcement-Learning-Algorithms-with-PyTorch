@@ -7,6 +7,9 @@ from gym import wrappers
 import numpy as np
 import matplotlib.pyplot as plt
 
+
+# os.environ['CUDA_VISIBLE_DEVICES'] ='0'
+
 class Trainer(object):
     """Runs games for given agents. Optionally will visualise and save the results"""
     def __init__(self, config, agents):
